@@ -1,0 +1,14 @@
+MCP_Client/build
+MCP_Client/dist
+MCP_Client/node_modules
+
+MCP_Server/build
+MCP_Server/dist
+MCP_Server/node_modules
+MCP_Server/*.sav
+
+MCPGame/build
+MCPGame/dist
+MCPGame/node_modules
+MCPGame/resources
+MCPGame/History_*.json

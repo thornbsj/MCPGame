@@ -1,0 +1,40 @@
+{
+  "name": "mcp_client",
+  "version": "1.0.0",
+  "description": "McpGameClient",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "package": "npm run build && pkg . -t win --out-path build/ --public"
+  },
+  "author": "",
+  "license": "ISC",
+  "pkg": {
+    "scripts": [
+      "dist/**/*",
+      "node_modules/axios/index.js"
+    ],
+    "assets": [
+      "node_modules/@modelcontextprotocol/**/*",
+      "node_modules/axios/**/*",
+      "node_modules/@jimp/**/*",
+      "node_modules/@openai/**/*",
+      "node_modules/pkce-challenge/**/*",
+      "node_modules/**/*"
+    ],
+    "targets": [
+      "node18-win-x64"
+    ]
+  },
+  "bin": "dist/index.js",
+  "dependencies": {
+    "@openai/agents": "^0.1.9",
+    "@types/express": "^5.0.3",
+    "axios": "^1.12.2",
+    "body-parser": "^2.2.0",
+    "ini": "^5.0.0",
+    "jimp": "^1.6.0",
+    "pkg": "^5.8.1"
+  }
+}

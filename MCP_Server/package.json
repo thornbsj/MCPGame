@@ -1,0 +1,39 @@
+{
+  "name": "mcpgameserver",
+  "version": "1.0.0",
+  "main": "src/MCP_Server.js",
+  "scripts": {
+    "build": "tsc",
+    "package": "npm run build && pkg . -t win --out-path build/",
+    "dev": "ts-node src/MCP_Server.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "pkg": {
+    "scripts": [
+      "dist/**/*.js"
+    ],
+    "assets": [
+      "config/**/*"
+    ],
+    "targets": [
+      "node18-win-x64"
+    ]
+  },
+  "bin": "dist/MCP_Server.js",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.16.0",
+    "@openai/agents": "^0.0.12",
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "ini": "^5.0.0",
+    "openai": "^5.10.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/ini": "^4.1.1",
+    "pkg": "^5.8.1"
+  }
+}
